@@ -1,0 +1,27 @@
+---
+import HeaderLink from './HeaderLink.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<header class={'border border-b bg-white'}>
+	<nav
+		class={
+			'container mx-auto px-[150px] flex justify-between items-center'
+		}>
+		<span class={'text-[38px] text-[#1975FF]'}>SG</span>
+		<ul class={'flex space-x-[65px]'}>
+			<li class={'py-[25px]'}>
+				<a href="#">Accueil</a>
+			</li>
+			<li class={'py-[25px]'}>
+				<a href="#">Portfolio</a>
+			</li>
+			<li class={'py-[25px]'}>
+				<a href="#">CV</a>
+			</li>
+			<li class={'py-[25px]'}>
+				<a href="#">Contact</a>
+			</li>
+		</ul>
+	</nav>
+</header>

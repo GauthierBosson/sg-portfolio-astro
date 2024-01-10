@@ -1,0 +1,33 @@
+---
+
+---
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1448 800" fill="none">
+    <g filter="url(#filter0_f_55_4)">
+        <path id="gradient-start" class="absolute -z-10" d="M1085.34 263.06C1127.97 391.629 1172.2 394.578 1000.97 451.364C829.735 508.149 327.894 727.43 285.257 598.861C242.619 470.291 526.862 189.867 698.093 133.082C869.324 76.2972 1042.7 134.49 1085.34 263.06Z" fill="url(#paint0_linear_55_4)" fill-opacity="0.4"/>
+        <path id="gradient-end" class="hidden" d="M1144 372C1186.64 500.57 957.232 605.215 786 662C614.769 718.785 304.637 354.57 262 226C219.363 97.4303 449.862 167.867 621.093 111.082C792.324 54.2973 1101.36 243.43 1144 372Z" fill="url(#paint0_linear_55_4)" fill-opacity="0.4"/>
+    </g>
+    <defs>
+        <filter id="filter0_f_55_4" x="-42.3469" y="-211.978" width="1489.73" height="1173.92" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+            <feGaussianBlur stdDeviation="161.651" result="effect1_foregroundBlur_55_4"/>
+        </filter>
+        <linearGradient id="paint0_linear_55_4" x1="467.492" y1="273.568" x2="852.497" y2="598.674" gradientUnits="userSpaceOnUse">
+            <stop offset="0.40625" stop-color="#8BFFFF"/>
+            <stop offset="1" stop-color="#B7FFD4"/>
+        </linearGradient>
+    </defs>
+</svg>
+
+<script>
+    import gsap from 'gsap'
+    import { MorphSVGPlugin } from 'gsap/MorphSVGPlugin'
+
+    gsap.registerPlugin(MorphSVGPlugin)
+    gsap.to('#gradient-start', {
+      morphSVG: '#gradient-end',
+      duration: 2,
+      repeat: -1,
+      yoyo: true,
+    })
+</script>
