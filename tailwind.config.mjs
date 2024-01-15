@@ -4,10 +4,10 @@ import defaultTheme from 'tailwindcss/defaultTheme';
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
-		screens: {
-			'2xl': '1440px',
-		},
 		extend: {
+			screens: {
+				'2xl': '1440px',
+			},
 			fontFamily: {
 				sans: ['Gabarito Variable', ...defaultTheme.fontFamily.sans],
 			},

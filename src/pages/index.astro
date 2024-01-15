@@ -29,11 +29,11 @@ import MovingGradient from "../components/MovingGradient.astro";
 						<p class={'text-[24px] text-center'}>Sandra Gonzalez</p>
 						<h1
 							class={
-								'pt-[10px] pb-[15px] text-[82px] bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-green-400'
+								'pt-[10px] pb-[15px] text-[82px] bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-green-400 leading-[80px] text-center'
 							}>
 							Senior Designer
 						</h1>
-						<ul class={'flex justify-between text-[16px]'}>
+						<ul class={'px-[70px] sm:px-0 flex flex-wrap justify-between text-[16px] gap-2'}>
 							<li>UI/UX desgin</li>
 							<li>Design systems</li>
 							<li>Mobile/Web apps</li>
@@ -47,26 +47,26 @@ import MovingGradient from "../components/MovingGradient.astro";
 					</div>
 					<div
 						class={
-							'absolute flex flex-col items-center bottom-2 left-1/2'
+							'flex absolute flex-col items-center bottom-2 left-1/2 -translate-x-1/2 translate-y-7 md:translate-y-0'
 						}>
 						Scroll
 						<ChevronDown />
 					</div>
 				</section>
-				<section class={'container mx-auto py-[85px] px-[250px]'}>
+				<section class={'container mx-auto py-[85px] px-[30px] lg:px-[250px]'}>
 					<h2 class={'text-center text-[42px]'}>Porfolio</h2>
 					<article class={'pt-[85px] pb-[150px]'}>
 						<img
 							src="/flowbank_trading_app/flowbank_trading_app_4x.webp"
 							alt="App de trading flowbank"
-							class={'rounded'}
+							class={'rounded object-cover aspect-[9/13] md:aspect-[16/9]'}
 						/>
 						<h3>App de trading Flowbank</h3>
 						<h4>Design system / UI/UX design / User testing</h4>
 					</article>
 
-					<div class={'projects grid grid-cols-2 gap-4'}>
-						<article class={'even:pt-[250px] even:place-self-end'}>
+					<div class={'projects grid grid-cols-1 md:grid-cols-2 gap-4'}>
+						<article class={'md:even:pt-[250px] md:even:place-self-end'}>
 							<div class={'project'}>
 								<img
 									width={'370'}
@@ -83,7 +83,7 @@ import MovingGradient from "../components/MovingGradient.astro";
 								</h4>
 							</div>
 						</article>
-						<article class={'even:pt-[250px] even:place-self-end'}>
+						<article class={'md:even:pt-[250px] md:even:place-self-end'}>
 							<div class={'project'}>
 								<img
 									width={'370'}
@@ -100,7 +100,7 @@ import MovingGradient from "../components/MovingGradient.astro";
 								</h4>
 							</div>
 						</article>
-						<article class={'even:pt-[250px] even:place-self-end'}>
+						<article class={'md:even:pt-[250px] md:even:place-self-end'}>
 							<div class={'project'}>
 								<img
 									width={'370'}
@@ -117,7 +117,7 @@ import MovingGradient from "../components/MovingGradient.astro";
 								</h4>
 							</div>
 						</article>
-						<article class={'even:pt-[250px] even:place-self-end'}>
+						<article class={'md:even:pt-[250px] md:even:place-self-end'}>
 							<div class={'project'}>
 								<img
 									width={'370'}
@@ -134,7 +134,7 @@ import MovingGradient from "../components/MovingGradient.astro";
 								</h4>
 							</div>
 						</article>
-						<article class={'even:pt-[250px] even:place-self-end'}>
+						<article class={'md:even:pt-[250px] md:even:place-self-end'}>
 							<div class={'project'}>
 								<img
 									width={'370'}
@@ -151,7 +151,7 @@ import MovingGradient from "../components/MovingGradient.astro";
 								</h4>
 							</div>
 						</article>
-						<article class={'even:pt-[250px] even:place-self-end'}>
+						<article class={'md:even:pt-[250px] md:even:place-self-end'}>
 							<div class={'project'}>
 								<img
 									width={'370'}
@@ -170,13 +170,13 @@ import MovingGradient from "../components/MovingGradient.astro";
 						</article>
 					</div>
 				</section>
-				<section class={'container px-[150px] mx-auto'}>
+				<section class={'container px-[30px] lg:px-[150px] mx-auto'}>
 					<h2 class={'text-[42px]'}>A propos</h2>
 					<div class={'flex justify-between gap-[120px]'}>
 						<img
 							width={'265'}
 							height={'265'}
-							class={'rounded-lg max-h-[265px]'}
+							class={'hidden md:inline-block rounded-lg max-h-[265px]'}
 							src="/photo_sandra.webp"
 							alt=""
 						/>
@@ -195,17 +195,17 @@ import MovingGradient from "../components/MovingGradient.astro";
 								livraison de produits de qualité qui répondent aux besoins des
 								utilisateurs comme de l’annonceur.
 							</p>
-							<button>CV FR</button>
-							<button>CV EN</button>
+							<BumpButton>CV FR</BumpButton>
+							<BumpButton>CV EN</BumpButton>
 						</div>
 					</div>
 					<div>
 						<h3 class={'text-[24px]'}>Compétences</h3>
 						<div
 							class={
-								'grid grid-cols-3 gap-y-[80px] gap-x-[45px] py-[40px]'
+								'flex overflow-auto md:grid md:grid-cols-2 lg:grid-cols-3 gap-y-[80px] gap-x-[45px] py-[40px]'
 							}>
-							<article class={'flex'}>
+							<article class={'min-w-[340px] md:min-w-0 flex'}>
                   <span class={'mr-[15px]'}>
                     <StarIcon />
                   </span>
@@ -218,7 +218,7 @@ import MovingGradient from "../components/MovingGradient.astro";
 									charte graphique.
 								</p>
 							</article>
-							<article class={'flex'}>
+							<article class={'min-w-[340px] md:min-w-0 flex'}>
                   <span class={'mr-[15px]'}>
                     <StarIcon />
                   </span>
@@ -231,7 +231,7 @@ import MovingGradient from "../components/MovingGradient.astro";
 									charte graphique.
 								</p>
 							</article>
-							<article class={'flex'}>
+							<article class={'min-w-[340px] md:min-w-0 flex'}>
                   <span class={'mr-[15px]'}>
                     <StarIcon />
                   </span>
@@ -244,7 +244,7 @@ import MovingGradient from "../components/MovingGradient.astro";
 									charte graphique.
 								</p>
 							</article>
-							<article class={'flex'}>
+							<article class={'min-w-[340px] md:min-w-0 flex'}>
                   <span class={'mr-[15px]'}>
                     <StarIcon />
                   </span>
@@ -257,7 +257,7 @@ import MovingGradient from "../components/MovingGradient.astro";
 									charte graphique.
 								</p>
 							</article>
-							<article class={'flex'}>
+							<article class={'min-w-[340px] md:min-w-0 flex'}>
                   <span class={'mr-[15px]'}>
                     <StarIcon />
                   </span>
@@ -291,13 +291,13 @@ import MovingGradient from "../components/MovingGradient.astro";
 						</div>
 					</div>
 				</section>
-				<section class={'relative container px-[250px] py-[100px] mx-auto'}>
+				<section class={'relative container px-[30px] lg:px-[250px] py-[100px] mx-auto'}>
 					<div aria-hidden="true" class="absolute inset-0 flex items-center justify-center">
 						<MovingGradient />
 					</div>
 					<div
 						class={
-							'py-[80px] px-[230px] rounded-2xl space-y-[60px] bg-contact-gradient'
+							'py-[80px] px-[18px] md:px-[150px] lg:px-[230px] rounded-2xl space-y-[60px] bg-contact-gradient'
 						}>
 						<h3 class={'text-[24px] text-center'}>
 							<span>Mon approche du design vous plait ?</span>
