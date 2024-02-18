@@ -1,0 +1,26 @@
+---
+title: Flowbank App
+description: Flowbank App
+---
+import {TextBlock} from '../../components/TextBlock';
+import {Phase} from '../../components/Phase';
+import {ChevronDown} from 'lucide-react';
+import TestingIcon from '../../components/TestingIcon.astro'
+
+
+<section className='container mx-auto px-[30px] lg:px-[150px]'>
+  <TextBlock.Root>
+    <TextBlock.Icon icon={<TestingIcon />} />
+    <TextBlock.Title>Test</TextBlock.Title>
+    <TextBlock.Description>sfpojwaeè pgf$wag lol lorem ipsum dolor sit amet consicutir</TextBlock.Description>
+  </TextBlock.Root>
+
+  <Phase.Root>
+    <Phase.Title>test</Phase.Title>
+    <Phase.MainTask>Test main</Phase.MainTask>
+    <Phase.SubTask>Test sub</Phase.SubTask>
+    <Phase.SubTask>Test sub 2</Phase.SubTask>
+    <Phase.SubTask>Test sub 3</Phase.SubTask>
+  </Phase.Root>
+</section>
+

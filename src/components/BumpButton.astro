@@ -3,35 +3,39 @@
 ---
 
 <div class="bump-button relative p-1 inline-block">
-    <button class="w-full relative z-20 flex items-center justify-between py-[16px] px-[20px] rounded-full bg-white border border-[#343434]">
-        <slot />
-    </button>
-    <div aria-hidden="true" class="absolute inset-0 bg-black rounded-full left-[5px] top-[5px] z-10"></div>
+  <button
+    class="hover:cursor-none w-full relative z-20 flex items-center justify-between py-[16px] px-[20px] rounded-full bg-white border border-[#343434]"
+  >
+    <slot />
+  </button>
+  <div
+    aria-hidden="true"
+    class="absolute inset-0 bg-black rounded-full left-[5px] top-[5px] z-10"
+  >
+  </div>
 </div>
 
 <script>
-    import gsap from "gsap";
+  import gsap from 'gsap';
+  let bumpButton = document.querySelectorAll('.bump-button > button');
 
-    let bumpButton = document.querySelectorAll('.bump-button > button')
+  function animate(element: Element) {
+    let animation = gsap.to(element, {
+      x: 2.2,
+      y: 2.3,
+      duration: 0.2,
+      ease: 'power1.out',
+      paused: true,
+    });
+    element.addEventListener('mouseenter', () => {
+      animation.play();
+    });
+    element.addEventListener('mouseleave', () => {
+      animation.reverse();
+    });
+  }
 
-    function animate(element: Element) {
-        let animation = gsap.to(element, {
-            x: 2.2,
-            y: 2.3,
-            duration: 0.2,
-            ease: 'power1.out',
-            paused: true
-        })
-        element.addEventListener('mouseenter', () => {
-            animation.play()
-        })
-        element.addEventListener('mouseleave', () => {
-            animation.reverse()
-        })
-    }
-
-    bumpButton.forEach(button => {
-      animate(button)
-    })
-
+  bumpButton.forEach((button) => {
+    animate(button);
+  });
 </script>

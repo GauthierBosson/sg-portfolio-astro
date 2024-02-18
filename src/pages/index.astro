@@ -1,331 +1,312 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
-import '@fontsource-variable/gabarito'
-import {ChevronDown} from "lucide-react";
-import StarIcon from "../components/StarIcon.astro";
-import TestingIcon from "../components/TestingIcon.astro";
-import BumpButton from "../components/BumpButton.astro";
-import MovingGradient from "../components/MovingGradient.astro";
+import {ChevronDown} from 'lucide-react';
+import StarIcon from '../components/StarIcon.astro';
+import TestingIcon from '../components/TestingIcon.astro';
+import BumpButton from '../components/BumpButton.astro';
+import MovingGradient from '../components/MovingGradient.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-	<div id="smooth-wrapper">
-		<div id="smooth-content">
-			<Header title={SITE_TITLE} />
-			<main>
-				<section
-					class={'h-[calc(100vh-74px)] grid place-items-center relative'}>
-					<div aria-hidden="true" class="absolute inset-0 flex items-center justify-center">
-						<MovingGradient />
-					</div>
-					<div class={'relative'}>
-						<p class={'text-[24px] text-center'}>Sandra Gonzalez</p>
-						<h1
-							class={
-								'pt-[10px] pb-[15px] text-[82px] bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-green-400 leading-[80px] text-center'
-							}>
-							Senior Designer
-						</h1>
-						<ul class={'px-[70px] sm:px-0 flex flex-wrap justify-between text-[16px] gap-2'}>
-							<li>UI/UX desgin</li>
-							<li>Design systems</li>
-							<li>Mobile/Web apps</li>
-							<li>Prototyping</li>
-						</ul>
-						<div class="text-center mt-[45px]">
-							<BumpButton>Contactez-moi <svg aria-hidden="true" class="ml-3" xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none">
-<path d="M3 15.5C2.5875 15.5 2.23438 15.3531 1.94063 15.0594C1.64687 14.7656 1.5 14.4125 1.5 14V5C1.5 4.5875 1.64687 4.23438 1.94063 3.94063C2.23438 3.64687 2.5875 3.5 3 3.5H15C15.4125 3.5 15.7656 3.64687 16.0594 3.94063C16.3531 4.23438 16.5 4.5875 16.5 5V14C16.5 14.4125 16.3531 14.7656 16.0594 15.0594C15.7656 15.3531 15.4125 15.5 15 15.5H3ZM15 6.5L9.39375 10.0063C9.33125 10.0438 9.26563 10.0719 9.19688 10.0906C9.12813 10.1094 9.0625 10.1188 9 10.1188C8.9375 10.1188 8.87188 10.1094 8.80313 10.0906C8.73438 10.0719 8.66875 10.0438 8.60625 10.0063L3 6.5V14H15V6.5ZM9 8.75L15 5H3L9 8.75ZM3 6.6875V5.58125V5.6V5.59063V6.6875Z" fill="#343434"/>
-</svg></BumpButton>
-						</div>
-					</div>
-					<div
-						class={
-							'flex absolute flex-col items-center bottom-2 left-1/2 -translate-x-1/2 translate-y-7 md:translate-y-0'
-						}>
-						Scroll
-						<ChevronDown />
-					</div>
-				</section>
-				<section class={'container mx-auto py-[85px] px-[30px] lg:px-[250px]'}>
-					<h2 class={'text-center text-[42px]'}>Porfolio</h2>
-					<article class={'pt-[85px] pb-[150px]'}>
-						<img
-							src="/flowbank_trading_app/flowbank_trading_app_4x.webp"
-							alt="App de trading flowbank"
-							class={'rounded object-cover aspect-[9/13] md:aspect-[16/9]'}
-						/>
-						<h3>App de trading Flowbank</h3>
-						<h4>Design system / UI/UX design / User testing</h4>
-					</article>
+<BaseLayout>
+  <section class={'h-[calc(100vh-74px)] grid place-items-center relative'}>
+    <div
+      aria-hidden="true"
+      class="absolute inset-0 flex items-center justify-center"
+    >
+      <MovingGradient />
+    </div>
+    <div class={'relative'}>
+      <p class={'text-[24px] text-center'}>Sandra Gonzalez</p>
+      <h1
+        class={'pt-[10px] pb-[15px] text-[82px] bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-green-400 leading-[80px] text-center'}
+      >
+        Senior Designer
+      </h1>
+      <ul
+        class={'px-[70px] sm:px-0 flex flex-wrap justify-between text-[16px] gap-2'}
+      >
+        <li>UI/UX desgin</li>
+        <li>Design systems</li>
+        <li>Mobile/Web apps</li>
+        <li>Prototyping</li>
+      </ul>
+      <div class="text-center mt-[45px]">
+        <BumpButton
+          >Contactez-moi <svg
+            aria-hidden="true"
+            class="ml-3"
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="19"
+            viewBox="0 0 18 19"
+            fill="none"
+          >
+            <path
+              d="M3 15.5C2.5875 15.5 2.23438 15.3531 1.94063 15.0594C1.64687 14.7656 1.5 14.4125 1.5 14V5C1.5 4.5875 1.64687 4.23438 1.94063 3.94063C2.23438 3.64687 2.5875 3.5 3 3.5H15C15.4125 3.5 15.7656 3.64687 16.0594 3.94063C16.3531 4.23438 16.5 4.5875 16.5 5V14C16.5 14.4125 16.3531 14.7656 16.0594 15.0594C15.7656 15.3531 15.4125 15.5 15 15.5H3ZM15 6.5L9.39375 10.0063C9.33125 10.0438 9.26563 10.0719 9.19688 10.0906C9.12813 10.1094 9.0625 10.1188 9 10.1188C8.9375 10.1188 8.87188 10.1094 8.80313 10.0906C8.73438 10.0719 8.66875 10.0438 8.60625 10.0063L3 6.5V14H15V6.5ZM9 8.75L15 5H3L9 8.75ZM3 6.6875V5.58125V5.6V5.59063V6.6875Z"
+              fill="#343434"></path>
+          </svg></BumpButton
+        >
+      </div>
+    </div>
+    <div
+      class={'flex absolute flex-col items-center bottom-2 left-1/2 -translate-x-1/2 translate-y-7 md:translate-y-0'}
+    >
+      Scroll
+      <ChevronDown />
+    </div>
+  </section>
+  <section class={'container mx-auto py-[85px] px-[30px] lg:px-[250px]'}>
+    <h2 class={'text-center text-[42px]'}>Porfolio</h2>
+    <article class={'pt-[85px] pb-[150px]'}>
+      <img
+        src="/flowbank_trading_app/flowbank_trading_app_4x.webp"
+        alt="App de trading flowbank"
+        class={'rounded object-cover aspect-[9/13] md:aspect-[16/9]'}
+      />
+      <h3>App de trading Flowbank</h3>
+      <h4>Design system / UI/UX design / User testing</h4>
+    </article>
 
-					<div class={'projects grid grid-cols-1 md:grid-cols-2 gap-4'}>
-						<article class={'md:even:pt-[250px] md:even:place-self-end'}>
-							<div class={'project'}>
-								<img
-									width={'370'}
-									height={'500'}
-									class={'rounded-lg'}
-									src="/global_campaign.webp"
-									alt="Global campaign"
-								/>
-								<h3 class={'text-[24px]'}>
-									Campagne globale <StarIcon /> Flowbank
-								</h3>
-								<h4 class={'text-[16px] text-[#898989]'}>
-									Branding / Direction artistique
-								</h4>
-							</div>
-						</article>
-						<article class={'md:even:pt-[250px] md:even:place-self-end'}>
-							<div class={'project'}>
-								<img
-									width={'370'}
-									height={'500'}
-									class={'rounded-lg'}
-									src="/global_campaign.webp"
-									alt="Global campaign"
-								/>
-								<h3 class={'text-[24px]'}>
-									Campagne globale <StarIcon /> Flowbank
-								</h3>
-								<h4 class={'text-[16px] text-[#898989]'}>
-									Branding / Direction artistique
-								</h4>
-							</div>
-						</article>
-						<article class={'md:even:pt-[250px] md:even:place-self-end'}>
-							<div class={'project'}>
-								<img
-									width={'370'}
-									height={'500'}
-									class={'rounded-lg'}
-									src="/global_campaign.webp"
-									alt="Global campaign"
-								/>
-								<h3 class={'text-[24px]'}>
-									Campagne globale <StarIcon /> Flowbank
-								</h3>
-								<h4 class={'text-[16px] text-[#898989]'}>
-									Branding / Direction artistique
-								</h4>
-							</div>
-						</article>
-						<article class={'md:even:pt-[250px] md:even:place-self-end'}>
-							<div class={'project'}>
-								<img
-									width={'370'}
-									height={'500'}
-									class={'rounded-lg'}
-									src="/global_campaign.webp"
-									alt="Global campaign"
-								/>
-								<h3 class={'text-[24px]'}>
-									Campagne globale <StarIcon /> Flowbank
-								</h3>
-								<h4 class={'text-[16px] text-[#898989]'}>
-									Branding / Direction artistique
-								</h4>
-							</div>
-						</article>
-						<article class={'md:even:pt-[250px] md:even:place-self-end'}>
-							<div class={'project'}>
-								<img
-									width={'370'}
-									height={'500'}
-									class={'rounded-lg'}
-									src="/global_campaign.webp"
-									alt="Global campaign"
-								/>
-								<h3 class={'text-[24px]'}>
-									Campagne globale <StarIcon /> Flowbank
-								</h3>
-								<h4 class={'text-[16px] text-[#898989]'}>
-									Branding / Direction artistique
-								</h4>
-							</div>
-						</article>
-						<article class={'md:even:pt-[250px] md:even:place-self-end'}>
-							<div class={'project'}>
-								<img
-									width={'370'}
-									height={'500'}
-									class={'rounded-lg'}
-									src="/global_campaign.webp"
-									alt="Global campaign"
-								/>
-								<h3 class={'text-[24px]'}>
-									Campagne globale <StarIcon /> Flowbank
-								</h3>
-								<h4 class={'text-[16px] text-[#898989]'}>
-									Branding / Direction artistique
-								</h4>
-							</div>
-						</article>
-					</div>
-				</section>
-				<section class={'container px-[30px] lg:px-[150px] mx-auto'}>
-					<h2 class={'text-[42px]'}>A propos</h2>
-					<div class={'flex justify-between gap-[120px]'}>
-						<img
-							width={'265'}
-							height={'265'}
-							class={'hidden md:inline-block rounded-lg max-h-[265px]'}
-							src="/photo_sandra.webp"
-							alt=""
-						/>
-						<div>
-							<h3 class={'text-[24px]'}>Sandra Gonzalez</h3>
-							<p class={'pt-[25px] pb-[35px] text-[16px] text-[#898989]'}>
-                  <span class={'block text-[18px] text-[#343434]'}>
-                    Senior designer basée à Genève en Suisse
-                  </span>
-								Au bénéfice de 5 années d'expérience en graphisme et design
-								produit, je développe avec passion des solutions visuellement
-								plaisantes et intuitives sur diverses plateformes, allant des
-								applications mobiles, de bureaux et sites web.
-								<br /> <br /> J'ai travaillé en étroite collaboration avec des
-								équipes de développeurs et de product managers pour assurer la
-								livraison de produits de qualité qui répondent aux besoins des
-								utilisateurs comme de l’annonceur.
-							</p>
-							<BumpButton>CV FR</BumpButton>
-							<BumpButton>CV EN</BumpButton>
-						</div>
-					</div>
-					<div>
-						<h3 class={'text-[24px]'}>Compétences</h3>
-						<div
-							class={
-								'flex overflow-auto md:grid md:grid-cols-2 lg:grid-cols-3 gap-y-[80px] gap-x-[45px] py-[40px]'
-							}>
-							<article class={'min-w-[340px] md:min-w-0 flex'}>
-                  <span class={'mr-[15px]'}>
-                    <TestingIcon />
-                  </span>
-								<p class={'text-[#898989] text-[16px]'}>
-                    <span class={'block text-[18px] text-[#343434]'}>
-                      Création de design system
-                    </span>
-									Création d’un design system solide permettant d’assurer la
-									cohérence à travers les différents produits et respect de la
-									charte graphique.
-								</p>
-							</article>
-							<article class={'min-w-[340px] md:min-w-0 flex'}>
-                  <span class={'mr-[15px]'}>
-                    <TestingIcon />
-                  </span>
-								<p class={'text-[#898989] text-[16px]'}>
-                    <span class={'block text-[18px] text-[#343434]'}>
-                      Création de design system
-                    </span>
-									Création d’un design system solide permettant d’assurer la
-									cohérence à travers les différents produits et respect de la
-									charte graphique.
-								</p>
-							</article>
-							<article class={'min-w-[340px] md:min-w-0 flex'}>
-                  <span class={'mr-[15px]'}>
-                    <TestingIcon />
-                  </span>
-								<p class={'text-[#898989] text-[16px]'}>
-                    <span class={'block text-[18px] text-[#343434]'}>
-                      Création de design system
-                    </span>
-									Création d’un design system solide permettant d’assurer la
-									cohérence à travers les différents produits et respect de la
-									charte graphique.
-								</p>
-							</article>
-							<article class={'min-w-[340px] md:min-w-0 flex'}>
-                  <span class={'mr-[15px]'}>
-                    <TestingIcon />
-                  </span>
-								<p class={'text-[#898989] text-[16px]'}>
-                    <span class={'block text-[18px] text-[#343434]'}>
-                      Création de design system
-                    </span>
-									Création d’un design system solide permettant d’assurer la
-									cohérence à travers les différents produits et respect de la
-									charte graphique.
-								</p>
-							</article>
-							<article class={'min-w-[340px] md:min-w-0 flex'}>
-                  <span class={'mr-[15px]'}>
-                    <TestingIcon />
-                  </span>
-								<p class={'text-[#898989] text-[16px]'}>
-                    <span class={'block text-[18px] text-[#343434]'}>
-                      Création de design system
-                    </span>
-									Création d’un design system solide permettant d’assurer la
-									cohérence à travers les différents produits et respect de la
-									charte graphique.
-								</p>
-							</article>
-						</div>
-					</div>
-					<div>
-						<h3 class={'text-[24px]'}>Logiciels</h3>
-						<div class={'py-[40px] space-y-[30px]'}>
-							<article class={'max-w-sm'}>
-								<span class={'block text-[#343434]'}>Design</span>
-								<p class={'text-[#898989]'}>
-									Figma, Photoshop, Illustrator, InDesign, AfterEffects,
-									Canvas, Procreate
-								</p>
-							</article>
-							<article class={'max-w-sm'}>
-								<span class={'block text-[#343434]'}>Autres</span>
-								<p class={'text-[#898989]'}>
-									Maze, ZeroHeight, Hubspot, MS Office
-								</p>
-							</article>
-						</div>
-					</div>
-				</section>
-				<section class={'relative container px-[30px] lg:px-[250px] py-[100px] mx-auto'}>
-					<div aria-hidden="true" class="absolute inset-0 flex items-center justify-center">
-						<MovingGradient />
-					</div>
-					<div
-						class={
-							'py-[80px] px-[18px] md:px-[150px] lg:px-[230px] rounded-2xl space-y-[60px] bg-contact-gradient'
-						}>
-						<h3 class={'text-[24px] text-center'}>
-							<span>Mon approche du design vous plait ?</span>
-							<span>Contactez-moi ci-dessous.</span>
-						</h3>
-						<div class={'flex justify-self-center flex-col items-center lg:flex-row justify-between gap-y-4'}>
-							<BumpButton>s.gonzalezmarono@proton.me</BumpButton>
-							<BumpButton>Profil LinkedIn</BumpButton>
-						</div>
-					</div>
-				</section>
-			</main>
-			<Footer />
-		</div>
-	</div>
-
-		<script>
-			import gsap from 'gsap';
-			import { ScrollTrigger } from "gsap/ScrollTrigger";
-			import { ScrollSmoother } from "gsap/ScrollSmoother";
-
-			gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-
-			ScrollSmoother.create({
-				smooth: 2,
-				effects: true
-			})
-		</script>
-	</body>
-</html>
+    <div class={'projects grid grid-cols-1 md:grid-cols-2 gap-4'}>
+      <article class={'md:even:pt-[250px] md:even:place-self-end'}>
+        <div class={'project'}>
+          <img
+            width={'370'}
+            height={'500'}
+            class={'rounded-lg'}
+            src="/global_campaign.webp"
+            alt="Global campaign"
+          />
+          <h3 class={'text-[24px]'}>
+            Campagne globale <StarIcon /> Flowbank
+          </h3>
+          <h4 class={'text-[16px] text-[#898989]'}>
+            Branding / Direction artistique
+          </h4>
+        </div>
+      </article>
+      <article class={'md:even:pt-[250px] md:even:place-self-end'}>
+        <div class={'project'}>
+          <img
+            width={'370'}
+            height={'500'}
+            class={'rounded-lg'}
+            src="/global_campaign.webp"
+            alt="Global campaign"
+          />
+          <h3 class={'text-[24px]'}>
+            Campagne globale <StarIcon /> Flowbank
+          </h3>
+          <h4 class={'text-[16px] text-[#898989]'}>
+            Branding / Direction artistique
+          </h4>
+        </div>
+      </article>
+      <article class={'md:even:pt-[250px] md:even:place-self-end'}>
+        <div class={'project'}>
+          <img
+            width={'370'}
+            height={'500'}
+            class={'rounded-lg mix-blend-difference'}
+            src="/global_campaign.webp"
+            alt="Global campaign"
+          />
+          <h3 class={'text-[24px]'}>
+            Campagne globale <StarIcon /> Flowbank
+          </h3>
+          <h4 class={'text-[16px] text-[#898989]'}>
+            Branding / Direction artistique
+          </h4>
+        </div>
+      </article>
+      <article class={'md:even:pt-[250px] md:even:place-self-end'}>
+        <div class={'project'}>
+          <img
+            width={'370'}
+            height={'500'}
+            class={'rounded-lg'}
+            src="/global_campaign.webp"
+            alt="Global campaign"
+          />
+          <h3 class={'text-[24px]'}>
+            Campagne globale <StarIcon /> Flowbank
+          </h3>
+          <h4 class={'text-[16px] text-[#898989]'}>
+            Branding / Direction artistique
+          </h4>
+        </div>
+      </article>
+      <article class={'md:even:pt-[250px] md:even:place-self-end'}>
+        <div class={'project'}>
+          <img
+            width={'370'}
+            height={'500'}
+            class={'rounded-lg'}
+            src="/global_campaign.webp"
+            alt="Global campaign"
+          />
+          <h3 class={'text-[24px]'}>
+            Campagne globale <StarIcon /> Flowbank
+          </h3>
+          <h4 class={'text-[16px] text-[#898989]'}>
+            Branding / Direction artistique
+          </h4>
+        </div>
+      </article>
+      <article class={'md:even:pt-[250px] md:even:place-self-end'}>
+        <div class={'project'}>
+          <img
+            width={'370'}
+            height={'500'}
+            class={'rounded-lg'}
+            src="/global_campaign.webp"
+            alt="Global campaign"
+          />
+          <h3 class={'text-[24px]'}>
+            Campagne globale <StarIcon /> Flowbank
+          </h3>
+          <h4 class={'text-[16px] text-[#898989]'}>
+            Branding / Direction artistique
+          </h4>
+        </div>
+      </article>
+    </div>
+  </section>
+  <section class={'container px-[30px] lg:px-[150px] mx-auto'}>
+    <h2 class={'text-[42px]'}>A propos</h2>
+    <div class={'flex justify-between gap-[120px]'}>
+      <img
+        width={'265'}
+        height={'265'}
+        class={'hidden md:inline-block rounded-lg max-h-[265px]'}
+        src="/photo_sandra.webp"
+        alt=""
+      />
+      <div>
+        <h3 class={'text-[24px]'}>Sandra Gonzalez</h3>
+        <p class={'pt-[25px] pb-[35px] text-[16px] text-[#898989]'}>
+          <span class={'block text-[18px] text-[#343434]'}>
+            Senior designer basée à Genève en Suisse
+          </span>
+          Au bénéfice de 5 années d'expérience en graphisme et design produit, je
+          développe avec passion des solutions visuellement plaisantes et intuitives
+          sur diverses plateformes, allant des applications mobiles, de bureaux et
+          sites web.
+          <br />
+          <br /> J'ai travaillé en étroite collaboration avec des équipes de développeurs
+          et de product managers pour assurer la livraison de produits de qualité
+          qui répondent aux besoins des utilisateurs comme de l’annonceur.
+        </p>
+        <BumpButton>CV FR</BumpButton>
+        <BumpButton>CV EN</BumpButton>
+      </div>
+    </div>
+    <div>
+      <h3 class={'text-[24px]'}>Compétences</h3>
+      <div
+        class={'flex overflow-auto md:grid md:grid-cols-2 lg:grid-cols-3 gap-y-[80px] gap-x-[45px] py-[40px]'}
+      >
+        <article class={'min-w-[340px] md:min-w-0 flex'}>
+          <span class={'mr-[15px]'}>
+            <TestingIcon />
+          </span>
+          <p class={'text-[#898989] text-[16px]'}>
+            <span class={'block text-[18px] text-[#343434]'}>
+              Création de design system
+            </span>
+            Création d’un design system solide permettant d’assurer la cohérence
+            à travers les différents produits et respect de la charte graphique.
+          </p>
+        </article>
+        <article class={'min-w-[340px] md:min-w-0 flex'}>
+          <span class={'mr-[15px]'}>
+            <TestingIcon />
+          </span>
+          <p class={'text-[#898989] text-[16px]'}>
+            <span class={'block text-[18px] text-[#343434]'}>
+              Création de design system
+            </span>
+            Création d’un design system solide permettant d’assurer la cohérence
+            à travers les différents produits et respect de la charte graphique.
+          </p>
+        </article>
+        <article class={'min-w-[340px] md:min-w-0 flex'}>
+          <span class={'mr-[15px]'}>
+            <TestingIcon />
+          </span>
+          <p class={'text-[#898989] text-[16px]'}>
+            <span class={'block text-[18px] text-[#343434]'}>
+              Création de design system
+            </span>
+            Création d’un design system solide permettant d’assurer la cohérence
+            à travers les différents produits et respect de la charte graphique.
+          </p>
+        </article>
+        <article class={'min-w-[340px] md:min-w-0 flex'}>
+          <span class={'mr-[15px]'}>
+            <TestingIcon />
+          </span>
+          <p class={'text-[#898989] text-[16px]'}>
+            <span class={'block text-[18px] text-[#343434]'}>
+              Création de design system
+            </span>
+            Création d’un design system solide permettant d’assurer la cohérence
+            à travers les différents produits et respect de la charte graphique.
+          </p>
+        </article>
+        <article class={'min-w-[340px] md:min-w-0 flex'}>
+          <span class={'mr-[15px]'}>
+            <TestingIcon />
+          </span>
+          <p class={'text-[#898989] text-[16px]'}>
+            <span class={'block text-[18px] text-[#343434]'}>
+              Création de design system
+            </span>
+            Création d’un design system solide permettant d’assurer la cohérence
+            à travers les différents produits et respect de la charte graphique.
+          </p>
+        </article>
+      </div>
+    </div>
+    <div>
+      <h3 class={'text-[24px]'}>Logiciels</h3>
+      <div class={'py-[40px] space-y-[30px]'}>
+        <article class={'max-w-sm'}>
+          <span class={'block text-[#343434]'}>Design</span>
+          <p class={'text-[#898989]'}>
+            Figma, Photoshop, Illustrator, InDesign, AfterEffects, Canvas,
+            Procreate
+          </p>
+        </article>
+        <article class={'max-w-sm'}>
+          <span class={'block text-[#343434]'}>Autres</span>
+          <p class={'text-[#898989]'}>Maze, ZeroHeight, Hubspot, MS Office</p>
+        </article>
+      </div>
+    </div>
+  </section>
+  <section
+    class={'relative container px-[30px] lg:px-[250px] py-[100px] mx-auto'}
+  >
+    <div
+      aria-hidden="true"
+      class="absolute inset-0 flex items-center justify-center"
+    >
+      <MovingGradient />
+    </div>
+    <div
+      class={'py-[80px] px-[18px] md:px-[150px] lg:px-[230px] rounded-2xl space-y-[60px] bg-contact-gradient'}
+    >
+      <h3 class={'text-[24px] text-center'}>
+        <span>Mon approche du design vous plait ?</span>
+        <span>Contactez-moi ci-dessous.</span>
+      </h3>
+      <div
+        class={'flex justify-self-center flex-col items-center lg:flex-row justify-between gap-y-4'}
+      >
+        <BumpButton>s.gonzalezmarono@proton.me</BumpButton>
+        <BumpButton>Profil LinkedIn</BumpButton>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

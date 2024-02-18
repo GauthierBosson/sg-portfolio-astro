@@ -1,3 +1,17 @@
 ---
-$END$
+import BaseLayout from './BaseLayout.astro';
+import ProjectBanner from '../components/ProjectBanner.astro';
+import { ArrowLeft } from 'lucide-react';
+
+//type Props = CollectionEntry<'projets'>['data'];
 ---
+
+<BaseLayout>
+  <section>
+    <div class="container mx-auto px-[30px] lg:px-[150px] pt-[75px] pb-[35px]">
+      <a href="#" class="flex items-center"><ArrowLeft width={20}  /><span class="pl-[10px]">Retour au portfolio</span></a>
+    </div>
+    <ProjectBanner />
+  </section>
+  <slot />
+</BaseLayout>
