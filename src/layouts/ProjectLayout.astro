@@ -1,7 +1,7 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 import ProjectBanner from '../components/ProjectBanner.astro';
-import { ArrowLeft } from 'lucide-react';
+import {ArrowLeft} from 'lucide-react';
 
 //type Props = CollectionEntry<'projets'>['data'];
 ---
@@ -9,9 +9,55 @@ import { ArrowLeft } from 'lucide-react';
 <BaseLayout>
   <section>
     <div class="container mx-auto px-[30px] lg:px-[150px] pt-[75px] pb-[35px]">
-      <a href="#" class="flex items-center"><ArrowLeft width={20}  /><span class="pl-[10px]">Retour au portfolio</span></a>
+      <a href="#" class="flex items-center"
+        ><ArrowLeft width={20} /><span class="pl-[10px]"
+          >Retour au portfolio</span
+        ></a
+      >
     </div>
     <ProjectBanner />
   </section>
   <slot />
+  <script>
+    import gsap from 'gsap';
+    import DrawSVGPlugin from 'gsap/DrawSVGPlugin';
+
+    gsap.registerPlugin(DrawSVGPlugin);
+
+    document.addEventListener('DOMContentLoaded', () => {
+      gsap.from('.blue-line', {
+        drawSVG: 0,
+        duration: 1.5,
+        ease: 'power2.out',
+        stagger: 0.6,
+      });
+
+      gsap.from('.blue-circle', {
+        scale: 0,
+        transformOrigin: 'center',
+        duration: 0.5,
+        delay: 1.5,
+        ease: 'power2.out',
+        stagger: 0.6,
+      });
+
+      gsap.from('.inner-blue-circle', {
+        scale: 0,
+        transformOrigin: 'center',
+        duration: 0.5,
+        delay: 1.7,
+        ease: 'power2.out',
+        stagger: 0.6,
+      });
+
+      gsap.from('.sub-task', {
+        x: 20,
+        opacity: 0,
+        duration: 0.5,
+        delay: 2,
+        ease: 'power2.out',
+        stagger: 0.6,
+      });
+    });
+  </script>
 </BaseLayout>

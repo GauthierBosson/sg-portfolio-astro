@@ -1,8 +1,12 @@
 export function TextBlockRoot({children}: {children: React.ReactNode}) {
-  return <div className="space-y-[15px]">{children}</div>;
+  return <div className="aya space-y-[15px]">{children}</div>;
 }
 
-export function TextBlockIcon({icon}: {icon: React.FC<React.SVGProps<SVGElement>>}) {
+export function TextBlockIcon({
+  icon,
+}: {
+  icon: React.FC<React.SVGProps<SVGElement>>;
+}) {
   return icon;
 }
 
@@ -23,4 +27,4 @@ export const TextBlock = {
   Title: TextBlockTitle,
   Description: TextBlockDescription,
   Media: TextBlockMedia,
-}
+};
